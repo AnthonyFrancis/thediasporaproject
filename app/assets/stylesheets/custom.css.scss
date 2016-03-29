@@ -21,7 +21,18 @@ body
 
 .text-shadow {
     text-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    margin-bottom: -7px;
 }
+
+.first-screen {
+    padding-top: 8.125rem;
+    padding-bottom: 3.125rem;
+}
+
+.first-screen .main-message {
+    margin: 6.25rem 0 3.125rem;
+}
+
 
 .round-image-28 {
     background-color: white;
@@ -35,4 +46,23 @@ body
     text-align: center;
     img { width: 100% }
     margin-top: 10px;
+}
+
+.navbar {
+    position: relative;
+    min-height: 50px;
+    margin-bottom: 0px;
+    border: 1px solid transparent;
+}
+
+.nav > li {
+    position: relative;
+    display: block;
+    margin-bottom: 0;
+}
+
+.container-full-bg {
+    box-shadow: rgba(0, 0, 0, 0.309804) 1500px 313px inset;
+    opacity: 1;
+    background-image:url('/assets/main-guy.jpg') 50% 50% / cover;
 }
