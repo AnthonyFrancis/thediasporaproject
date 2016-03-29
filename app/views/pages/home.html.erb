@@ -1,16 +1,13 @@
-<style type="text/css">
-	
-	.first-screen {
-    padding-top: 8.125rem;
-    padding-bottom: 3.125rem;
-}
+<% if user_signed_in? %>
 
-.first-screen .main-message {
-    margin: 6.25rem 0 3.125rem;
-}
+<div class="container">
+<h1>Activity Feed</h1>
+<p>New Companies Created</p>
+<p>New Syndicates Created</p>
+<p>Syndicates Updates</p>
+</div>
 
-
-</style>
+<% else %>
 
 <div class="first-screen" style="background: url('/assets/main-guy.jpg') 50% 50% / cover; box-shadow: 1500px 313px rgba(0, 0 ,0, 0.31) inset;">
     <div class="row">
@@ -28,3 +25,5 @@
         </div>
     </div>
 </div>
+
+<% end %>
