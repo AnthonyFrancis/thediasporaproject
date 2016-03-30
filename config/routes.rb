@@ -8,7 +8,7 @@ Rails.application.routes.draw do
 
   #end
 
-  resources :registrations, only: [:index, :show, :edit, :update], :path=>'' do
+  resources :registrations, only: [:index, :show, :edit, :update, :destroy], :path=>'' do
     
   end
 
