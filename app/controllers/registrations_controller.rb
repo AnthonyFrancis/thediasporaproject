@@ -25,4 +25,12 @@ def after_update_path_for(resource)
   root_path
 end
 
+def index
+	@users = User.all
+end
+
+def show
+	@user = User.find_by_username(params[:id])
+end
+
 end

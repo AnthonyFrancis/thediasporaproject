@@ -1,11 +1,18 @@
 Rails.application.routes.draw do
   devise_for :users ,:controllers => { :registrations => "registrations" }
   root "pages#home"
-  get "people" => "users#index"
+  get "people" => "registrations#index"
   get "settings" => "registrations#edit"
 
-  resources :users, only: [:index, :show], :path=>'u' do
+  #resources :users, only: [:index, :show], :path=>'u' do
+
+  #end
+
+  resources :registrations, only: [:index, :show, :edit, :update], :path=>'' do
+    
   end
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

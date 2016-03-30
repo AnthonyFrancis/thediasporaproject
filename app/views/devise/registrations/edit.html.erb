@@ -23,6 +23,14 @@
     </div>
     <%= @user.username %>
 
+    <div class="form-group">
+      <%= f.label :photo %>
+      <%= f.file_field :photo, class: "form-control" %>
+    </div>
+
+    <%= image_tag(current_user.photo.url(:thumb)) %>
+
+
     <div class="field">
       <%= f.label :miniresume %><br />
       <%= f.text_area :miniresume , autofocus: true %>
@@ -48,7 +56,7 @@
 
     <div class="field">
       <%# f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-      <%# f.password_field :current_password, autocomplete: "off" %>
+      <% f.password_field :current_password, autocomplete: "off" %>
     </div>
 
     <div class="actions">
